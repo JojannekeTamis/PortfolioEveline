@@ -1,0 +1,27 @@
+.img-circle {
+  border-radius: 50%;
+}
+
+.flat {
+  position: relative;
+}
+
+.flat-owner {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+.flat-info {
+  position: absolute;
+  top: 0px;
+  left: 120px;
+}
+
+.flat-form {
+  background-color: #f4f4f4;
+  padding: 10px;
+}
+
+.form-group {
+  margin-top: 10px;
+}

@@ -1,0 +1,60 @@
+anne:
+  owner_name: Anne Collet
+  banner: http://www.golivegotravel.nl/wp-content/uploads/2014/07/DSC01117.jpg
+  picture: images/card-brussels.jpeg
+  owner_picture: images/anne.jpg
+  name: Anne's home
+  summary: Lovely house
+  city: Brussels, Belgium
+  wifi: true
+  rating: 3
+seb:
+  owner_name: Sebastien Saunier
+  banner: images/card-paris.jpg
+  picture: images/card-paris.jpg
+  owner_picture: images/seb.jpg
+  name: Seb's home
+  summary: Charming room in Montmartre
+  city: Paris, France
+  wifi: true
+  rating: 4
+romain:
+  owner_name: Romain Paillard
+  banner: images/card-london.jpeg
+  picture: images/card-london.jpeg
+  owner_picture: images/romain.jpeg
+  name: Romain's home
+  summary: Nice flat in Piccadilly
+  city: London, UK
+  wifi: false
+  rating: 5
+jojanneke:
+  owner_name: Jojanneke Tamis
+  banner: https://mediabank.valkenhorst.nl/imagebank/images/20/image24204/c340x940.jpg
+  picture: images/card-haarlem.jpg
+  owner_picture: images/jojan.JPG
+  name: Jojanneke's home
+  summary: Student room
+  city: Haarlem, NL
+  wifi: true
+  rating: 2
+roos:
+  owner_name: Roos Tamis
+  banner: http://www.refdag.nl/polopoly_fs/de_vijfhuizer_molen_langs_de_ringvaart_van_de_haarlemmermeerpolder_1_59104!image/864642192.jpg
+  picture: images/card-haarlem.jpg
+  owner_picture: images/jojan.JPG
+  name: Roos's home
+  summary: Nice village
+  city: Vijfhuizen, NL
+  wifi: true
+  rating: 5
+fien:
+  owner_name: Fien Tamis
+  banner: http://www.refdag.nl/polopoly_fs/de_vijfhuizer_molen_langs_de_ringvaart_van_de_haarlemmermeerpolder_1_59104!image/864642192.jpg
+  picture: images/card-haarlem.jpg
+  owner_picture: images/jojan.JPG
+  name: Fien's home
+  summary: Nice village
+  city: Vijfhuizen, NL
+  wifi: true
+  rating: 5

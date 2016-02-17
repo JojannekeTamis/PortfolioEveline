@@ -1,0 +1,59 @@
+<!-- source/flats/show.html.erb -->
+
+<!-- Read from data.flats with owner key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url(<%= flat.banner %>); height: 50vh; background-position: center;">
+</div>
+
+<div class="container padded features">
+  <div class="row">
+    <div class="col-xs-6 col-sm-offset-1">
+      <div class="flat">
+        <div class="flat-owner text-center">
+          <%= image_tag flat.owner_picture, class: "img-circle" %>
+          <p><%= flat.owner_name %></p>
+        </div>
+        <div class="flat-info">
+          <h1><%= flat.summary %></h1>
+          <p><%= flat.city %></p>
+        <% flat.rating.times do %>
+         <i class="fa fa-star"></i>
+          <% end %>
+          <% (5 - flat.rating).times do %>
+         <i class="fa fa-star-o"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xs-4">
+      <div class="flat-form">
+        <h4>Book this flat</h4>
+        <form action="#">
+          <div class="form-group">
+            <div class="row">
+              <div class="col-xs-6">
+                <input type="text" class="form-control input-lg" placeholder="checkin">
+              </div>
+              <div class="col-xs-6">
+                <input type="text" class="form-control input-lg" placeholder="checkout">
+              </div>
+            </div>
+            <div class="form-group">
+              <select name="" id="" class="form-control input-lg" style="width: 100%">
+                <option value="1">1 person</option>
+                <option value="2">2 persons</option>
+                <option value="3">3 persons</option>
+              </select>
+            </div>
+            <input type="submit" class="btn btn-danger btn-lg" style="width: 100%" value="Book it">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
