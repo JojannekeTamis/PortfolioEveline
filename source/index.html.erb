@@ -1,100 +1,248 @@
----
-title: Le Wagon Middleman boilerplate
----
 
-    <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
-      <div class="banner-content">
-        <h1>WELCOME HOME</h1>
-        <p>Rent unique places to stay from local hosts in 190+ countries.</p>
-        <form action="#" class="form-inline">
-          <input type="text" class="form-control input-lg" placeholder="checkin">
-          <input type="text" class="form-control input-lg" placeholder="checkout">
-          <select name="" id="" class="form-control input-lg">
-            <option value="1">1 person</option>
-            <option value="2">2 persons</option>
-            <option value="3">3 persons</option>
-          </select>
-          <input type="submit" class="btn btn-primary btn-lg" value="Search">
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#porto">Portfolio</a>
+  <a href="#about">About</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<span onclick="openNav()"><div id="nav-icon4">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</span>
+
+
+<div id="main">
+
+ <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+  <div class="banner-content">
+    <h1>Portfoilo</h1>
+    <p>Eveline Tamis</p>
+  </div>
+</div>
+
+
+ <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+   <div class="item active">
+     <%= image_tag 'beach.png' %>
+     <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+  <div class="item">
+    <%= image_tag 'background.jpg' %>
+    <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+  <div class="item">
+    <%= image_tag 'beach.png' %>
+    <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+
+ <!--      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: url('images/background.jpg');">
+            <div class="card-hover">
+              <h4>Project 1</h4>
+              <p class="text-white">This is my work I'm proud of it.</p>
+            </div>
+        </div>
+      </div>
+    -->
+
+
+<!-- <div class="wrapper-grey padded" style="background-color: #FFFFFF">
+  <div class="container">
+    <div class="row">
+      <% data.flats.each do |owner, flat| %>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
+          <div class="card-hover">
+            <h4><%= flat.name %></h4>
+            <p class="text-white"><%= flat.summary %></p>
+          </div>
+          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div> -->
+
+<div class="wrapper-grey padded" style="background-color: #FFFFFF" id="portfolio">
+  <div class="container" id="porto">
+    <div class="row">
+      <% data.projecten.each do |title, project| %>
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card" style="background-image: url('<%= image_path project.card_picture %>');">
+          <div class="card-hover">
+            <h4><%= project.title %></h4>
+            <p class="text-white"><%= project.summary %></p>
+          </div>
+          <%= link_to "", "projecten/#{title}.html", class: "card-link" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-grey padded" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8" style="padding-left: 10px; padding-right: 10px">
+        <div class="card_about">
+          <h2>About:</h2>
+          <p>Hallo! Ik ben Eveline Tamis, vierdejaars student grafisch vormgeving op het Mediacollege. Welkom op mijn online portfolio. Op deze website laat ik mijn werk van de afgelopen vier jaar zien. U kunt hieronder ook mijn CV bekijken. </p>
+
+          <p>Ik ben altijd creatief bezig geweest. Het begon op de bassischool (Rudolf Steiner school/ Vrije school), met tekenlessen, schilderlessen, houtbewerking, handwerken en boetseren. Tekenlessen ben ik altijd blijven volgen. Na de middelbare school besloot ik een jaar High School in Amerika te volgen. Toen ik daar de les Graphic Design volgde, wist ik dat ik hiervan mijn beroep wilde maken.</p>
+
+          <p>De foto links is gemaakt tijdens mijn stage bij Studio Pets by Myrna. Zie mijn andere werkervaringen hieronder.
+          </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card" <div class="card" style="background-image: url('images/About.png');">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="resume">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card_cv">
+          <p> Educatie </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card_cv">
+          <p> Werkervaring </p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card_cv">
+          <p> Vaardigheden </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card-resume">
+          <p><b>Mediacollege 2012-2016 </b></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+        <div class="card-resume">
+         <p><b>High school Amerika 2011 - 2012, Stewartville MN </b></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+       </div>
+     </div>
+     <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+      <div class="card-resume">
+        <p>Ervaring met:</p>
+        <p>- Indesign</p>
+        <p>- Photoshop</p>
+        <p>- Illustrator</p>
+        <p>- Flash</p>
+        <p>- Dreamweaver</p>
+        <p>- De programma’s uit het Microsoft Office pakket</p>
+        <p>- Outlook</p>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+    <div class="card-resume">
+     <p><b>Stage Studio Pets by Myrna 2/2015 - 10/2015 </b></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+   </div>
+ </div>
+ <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+  <div class="card-resume">
+  <p><b>Stage Gemini Design 9/2014 - 1/2015 </b></p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+ </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="wrapper-contact" id="contact">
+  <div class="box-contact" >
+    <h2>Contact</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-5">
+        <p>
+          Ik ben momenteel beschikbaar voor freelance opdrachten.
+        </p>
+        <p>
+          Neem contact met mij op via dit formulier om mogelijkheden te berspreken.
+        </p>
+
+      </div>
+
+      <div class="col-xs-12 col-sm-7">
+        <form action="//formspree.io/jojanneketamis@hotmail.com" class="form-booking" method="POST">
+          <div class="row">
+            <div class="col-xs-4">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+            </div>
+            <div class="col-xs-8">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Email">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <textarea name="message" class="form-group form-control" rows="5" placeholder="Message"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <input type="submit" class="btn" style="width: 100%;" value="Submit">
+            </div>
+          </div>
         </form>
       </div>
     </div>
-    <div class="container text-center padded features">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3">
-        <%= image_tag "globe.png" %>
-          <h2>Discover the world</h2>
-          <p>The earth is your new home.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag "dollar.png" %>
-          <h2>Pay online</h2>
-          <p>No cash issues anymore.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag "beer.png" %>
-          <h2>Meet people</h2>
-          <p>Discover new culture and lifestyle.</p>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-3">
-          <%= image_tag "heart.png" %>
-          <h2>Share and love</h2>
-          <p>Join a community you will love.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrapper-grey padded">
-      <div class="container">
-  <div class="row">
-    <% data.flats.each do |owner, flat| %>
-    <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
-        <div class="card-category"><%= flat.city %></div>
-        <div class="card-description">
-          <h2><%= flat.name %></h2>
-          <p><%= flat.summary %></p>
-        </div>
-        <%= image_tag flat.owner_picture, class:"card-user avatar avatar-large" %>
-        <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
-      </div>
-    </div>
-    <% end %>
   </div>
+
 </div>
-    </div>
 
-    <div class="text-center padded" id="newsletter">
-      <h2>Get news from us</h2>
-      <p>Leave us your mail and get news from us</p>
-      <form class="form-inline">
-        <input type="email" placeholder="bob@gmail.com" class="form-control">
-        <input type="submit" value="Subscribe" class="btn btn-primary">
-      </form>
-    </div>
-
-    <div id="map" style="width: 100%;height: 500px;"></div>
+</div>
 
 
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-    <script type="text/javascript">
-    var myLatlng = new google.maps.LatLng(48.852937,2.364178);
-    var myOptions = {
-      zoom: 16,
-      center: myLatlng,
-      scrollwheel: false,
-      mapTypeId: google.maps.MapTypeId.ROADMAP,
-      styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
-    };
-    var map = new google.maps.Map(document.getElementById('map'), myOptions);
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title:"You are here!"
-    });
-    </script>
 
 
-    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

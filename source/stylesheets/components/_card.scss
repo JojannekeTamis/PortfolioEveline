@@ -1,34 +1,35 @@
 .card {
-  height: 250px;
+  height: 300px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   color: white;
   position: relative;
-  border-radius: 5px;
   margin-bottom: 20px;
 }
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-}
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 22px;
-}
-.card-description p {
-  font-size: 15px;
-}
+
+
+// .card-user {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+// }
+// .card-category {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 20px;
+// }
+// .card-description {
+//   position: absolute;
+//   bottom: 10px;
+//   left: 10px;
+// }
+// .card-description h2 {
+//   font-size: 22px;
+// }
+// .card-description p {
+//   font-size: 15px;
+// }
 .card-link {
   position: absolute;
   top: 0;
@@ -40,4 +41,44 @@
 }
 .card-link:hover{
   opacity: 0.1;
+}
+
+.card-hover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  h4 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+    opacity: 1;
+  }
+  p {
+    text-align: center;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.card:hover .card-hover {
+  opacity: 0.7;
+}
+
+.card_cv {
+  background-color: #ffcfab;
+  text-align: center;
+  p {
+    padding: 15px;
+  }
+}
+
+.card_about {
+  text-align: center;
 }

@@ -1,0 +1,56 @@
+<!-- source/flats/show.html.erb -->
+
+<!-- Read from data.flats with owner key -->
+<% project = data.projecten[owner] %>
+
+<div class="wrapper-grey padded" style="background-color: #FFFFFF">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+       <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+       <%= image_tag project.picture1 %>
+      </div>
+
+      <div class="item">
+        <%= image_tag project.picture2 %>
+      </div>
+
+      <div class="item">
+        <%= image_tag project.picture3 %>
+      </div>
+
+      <div class="item">
+        <%= image_tag project.picture4 %>
+      </div>
+
+      <div class="item">
+        <%= image_tag project.picture5 %>
+      </div>
+
+
+  </div>
+</div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <p><%= project.title %></p>
+        <p><%= project.date %></p>
+        <p><%= project.description %></p>
+        <p><%= project.concept %></p>
+        <p><%= project.explanation %></p>
+      </div>
+    </div>
+  </div>
+</div>
+

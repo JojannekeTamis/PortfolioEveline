@@ -1,0 +1,39 @@
+.wrapper-contact {
+  background-color: #0B243B;
+  h2 {
+    color: white;
+  }
+}
+
+.box-contact {
+    margin: 0 auto; max-width: 900px;
+    background-color: #0B243B;
+    padding: 40px;
+    border-radius: 0px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.box-contact p {
+  color: white;
+  text-align: left;
+}
+
+.btn {
+  background-color: #4297e6;
+}
+
+
+.list-contacts {
+  list-style: none;
+  padding-left: 0;
+  margin: 2em 0; }
+
+.list-contacts li {
+  margin-bottom: 20px;
+  display: table; }
+
+.list-contacts [class*="fa-"] {
+  margin-right: 15px;
+  display: table-cell;
+  width: 30px; }
