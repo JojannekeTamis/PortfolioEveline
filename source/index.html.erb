@@ -1,130 +1,95 @@
+<div id="wrapper">
+  <div class="overlay"></div>
 
+  <!-- Sidebar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+    <ul class="nav sidebar-nav">
+      <li class="sidebar-brand">
+        <a href="#">
+         <!-- Brand -->
+       </a>
+     </li>
+     <li>
+      <a href="#home">Home</a>
+    </li>
+    <li>
+      <a href="#porto">Portfolio</a>
+    </li>
+     <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+    <li>
+      <a href="#about">About</a>
+    </li>
+    <li>
+      <a href="#resume">Resume</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+    <li>
+      <a href="https://twitter.com/maridlcrmn">Follow me</a>
+    </li>
+  </ul>
+</nav>
+<!-- /#sidebar-wrapper -->
 
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#home">Home</a>
-  <a href="#porto">Portfolio</a>
-  <a href="#about">About</a>
-  <a href="#resume">Resume</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<span onclick="openNav()"><div id="nav-icon4">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
-</span>
-
-
-<div id="main">
-
- <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
-  <div class="banner-content">
-    <h1>Portfoilo</h1>
-    <p>Eveline Tamis</p>
-  </div>
-</div>
-
-
- <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <div class="carousel-inner" role="listbox">
-   <div class="item active">
-     <%= image_tag 'beach.png' %>
-     <div class="carousel-caption">
-      <h3>Eveline Tamis</h3>
-      <p>Grafisch vormgever & illustrator</p>
+<!-- Page Content -->
+<!-- <div id="page-content-wrapper"> -->
+  <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+    <span class="hamb-top"></span>
+    <span class="hamb-middle"></span>
+    <span class="hamb-bottom"></span>
+  </button>
+  <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
+    <div class="banner-content">
+      <h1>Portfoilo</h1>
+      <p>Eveline Tamis</p>
     </div>
   </div>
-  <div class="item">
-    <%= image_tag 'background.jpg' %>
-    <div class="carousel-caption">
-      <h3>Eveline Tamis</h3>
-      <p>Grafisch vormgever & illustrator</p>
-    </div>
-  </div>
-  <div class="item">
-    <%= image_tag 'beach.png' %>
-    <div class="carousel-caption">
-      <h3>Eveline Tamis</h3>
-      <p>Grafisch vormgever & illustrator</p>
-    </div>
-  </div>
-</div>
-</div> -->
-
-
-
- <!--      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: url('images/background.jpg');">
+  <div class="wrapper-grey padded" style="background-color: #FFFFFF" id="portfolio">
+    <div class="container" id="porto">
+      <div class="row">
+        <% data.projecten.each do |title, project| %>
+        <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+          <div class="card" style="background-image: url('<%= image_path project.card_picture %>');">
             <div class="card-hover">
-              <h4>Project 1</h4>
-              <p class="text-white">This is my work I'm proud of it.</p>
+              <h4><%= project.title %></h4>
+              <p class="text-white"><%= project.summary %></p>
             </div>
-        </div>
-      </div>
-    -->
-
-
-<!-- <div class="wrapper-grey padded" style="background-color: #FFFFFF">
-  <div class="container">
-    <div class="row">
-      <% data.flats.each do |owner, flat| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: url('<%= image_path flat.picture %>');">
-          <div class="card-hover">
-            <h4><%= flat.name %></h4>
-            <p class="text-white"><%= flat.summary %></p>
+            <%= link_to "", "projecten/#{title}.html", class: "card-link" %>
           </div>
-          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
         </div>
+        <% end %>
       </div>
-      <% end %>
     </div>
   </div>
-</div> -->
 
-<div class="wrapper-grey padded" style="background-color: #FFFFFF" id="portfolio">
-  <div class="container" id="porto">
-    <div class="row">
-      <% data.projecten.each do |title, project| %>
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card" style="background-image: url('<%= image_path project.card_picture %>');">
-          <div class="card-hover">
-            <h4><%= project.title %></h4>
-            <p class="text-white"><%= project.summary %></p>
+  <div class="wrapper-grey padded" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8" style="padding-left: 10px; padding-right: 10px">
+          <div class="card_about">
+            <h2>About:</h2>
+            <p>Hallo! Ik ben Eveline Tamis, vierdejaars student grafisch vormgeving op het Mediacollege. Welkom op mijn online portfolio. Op deze website laat ik mijn werk van de afgelopen vier jaar zien. U kunt hieronder ook mijn CV bekijken. </p>
+
+            <p>Ik ben altijd creatief bezig geweest. Het begon op de bassischool (Rudolf Steiner school/ Vrije school), met tekenlessen, schilderlessen, houtbewerking, handwerken en boetseren. Tekenlessen ben ik altijd blijven volgen. Na de middelbare school besloot ik een jaar High School in Amerika te volgen. Toen ik daar de les Graphic Design volgde, wist ik dat ik hiervan mijn beroep wilde maken.</p>
+
+            <p>De foto links is gemaakt tijdens mijn stage bij Studio Pets by Myrna. Zie mijn andere werkervaringen hieronder.
+            </p>
           </div>
-          <%= link_to "", "projecten/#{title}.html", class: "card-link" %>
         </div>
-      </div>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<div class="wrapper-grey padded" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8" style="padding-left: 10px; padding-right: 10px">
-        <div class="card_about">
-          <h2>About:</h2>
-          <p>Hallo! Ik ben Eveline Tamis, vierdejaars student grafisch vormgeving op het Mediacollege. Welkom op mijn online portfolio. Op deze website laat ik mijn werk van de afgelopen vier jaar zien. U kunt hieronder ook mijn CV bekijken. </p>
-
-          <p>Ik ben altijd creatief bezig geweest. Het begon op de bassischool (Rudolf Steiner school/ Vrije school), met tekenlessen, schilderlessen, houtbewerking, handwerken en boetseren. Tekenlessen ben ik altijd blijven volgen. Na de middelbare school besloot ik een jaar High School in Amerika te volgen. Toen ik daar de les Graphic Design volgde, wist ik dat ik hiervan mijn beroep wilde maken.</p>
-
-          <p>De foto links is gemaakt tijdens mijn stage bij Studio Pets by Myrna. Zie mijn andere werkervaringen hieronder.
-          </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card" <div class="card" style="background-image: url('images/About.png');">
+        <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+          <div class="card" <div class="card" style="background-image: url('images/About.png');">
+          </div>
         </div>
       </div>
     </div>
@@ -152,13 +117,13 @@
       <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
         <div class="card-resume">
           <p><b>Mediacollege 2012-2016 </b></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
         <div class="card-resume">
-         <p><b>High school Amerika 2011 - 2012, Stewartville MN </b></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+         <p><b>Stage Studio Pets by Myrna 2/2015 - 10/2015  </b></p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
        </div>
      </div>
      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
@@ -178,16 +143,15 @@
 <div class="row">
   <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
     <div class="card-resume">
-     <p><b>Stage Studio Pets by Myrna 2/2015 - 10/2015 </b></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
+     <p><b>High school Amerika 2011 - 2012, Stewartville MN </b></p>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure.</p>
    </div>
  </div>
  <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
   <div class="card-resume">
-  <p><b>Stage Gemini Design 9/2014 - 1/2015 </b></p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. Molestias fuga, ea cupiditate optio architecto, consequatur modi sint quia, voluptatum ab deserunt ad culpa suscipit! A facilis dolorem eius laborum, voluptatum adipisci corporis natus cumque ad.</p>
- </div>
-</div>
+    <p><b>Stage Gemini Design 9/2014 - 1/2015 </b></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
+  </div>
 </div>
 </div>
 </div>
@@ -236,13 +200,88 @@
   </div>
 
 </div>
+</div>
+<!-- /#page-content-wrapper -->
 
+<!-- </div> -->
+
+
+<!-- <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#porto">Portfolio</a>
+  <a href="#about">About</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
 </div>
 
+<span onclick="openNav()"><div id="nav-icon4">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+</span>
+
+
+<div id="main"> -->
 
 
 
 
-<!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <div class="carousel-inner" role="listbox">
+   <div class="item active">
+     <%= image_tag 'beach.png' %>
+     <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+  <div class="item">
+    <%= image_tag 'background.jpg' %>
+    <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+  <div class="item">
+    <%= image_tag 'beach.png' %>
+    <div class="carousel-caption">
+      <h3>Eveline Tamis</h3>
+      <p>Grafisch vormgever & illustrator</p>
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+
+ <!--      <div class="col-xs-12 col-sm-4">
+        <div class="card" style="background-image: url('images/background.jpg');">
+            <div class="card-hover">
+              <h4>Project 1</h4>
+              <p class="text-white">This is my work I'm proud of it.</p>
+            </div>
+        </div>
+      </div>
+    -->
+
+
+
+
+
+    <!-- </div> -->
+
+
+
+
+
+    <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>

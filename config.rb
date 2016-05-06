@@ -90,9 +90,6 @@ activate :deploy do |deploy|
   # deploy.commit_message = 'custom-message' # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
 end
 
-["anne", "seb", "romain", "jojanneke", "roos", "fien", "els", "wim", "cuby"].each do |name|
-  proxy "/flats/#{name}.html", "/flats/show.html", :locals => { :owner => name }, :ignore => true
-end
 ["kinderboek", "zero_waste", "stedenproject", "stageverslag1", "studio_pets", "huisstijl", "stageverslag2", "spread", "kunstkwartet"].each do |name|
   proxy "/projecten/#{name}.html", "/projecten/show.html", :locals => { :owner => name }, :ignore => true
 end
