@@ -1,13 +1,16 @@
 .wrapper-contact {
-  background-color: #0B243B;
+  background-color: #7AACC1;
   h2 {
-    color: white;
+      font-family: 'Roboto', sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  color: white;
   }
 }
 
 .box-contact {
     margin: 0 auto; max-width: 900px;
-    background-color: #0B243B;
+    background-color: #7AACC1;
     padding: 40px;
     border-radius: 0px;
     text-align: center;
@@ -17,12 +20,25 @@
 .box-contact p {
   color: white;
   text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
 }
 
 .btn {
-  background-color: #4297e6;
+  background-color: #182e3d;
+  color: white;
+  .btn:hover {
+  color: white;
+  opacity: 0.5;
+  }
 }
 
+.form-control {
+p {
+ font-family: 'Roboto', sans-serif;
+}
+}
 
 .list-contacts {
   list-style: none;

@@ -13,197 +13,193 @@
       <a href="#home">Home</a>
     </li>
     <li>
-      <a href="#porto">Portfolio</a>
+      <a href="#portfolio">Portfolio</a>
     </li>
-     <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+  <!-- <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projecten <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    <li class="dropdown-header"></li>
+                    <li><a href="projecten/zero_waste.html">Zero Waste</a></li>
+                    <li><a href="#">Kinderboek</a></li>
+                    <li><a href="#">Stedenproject</a></li>
+                    <li><a href="#">Stageverslag 1</a></li>
+                     <li><a href="#">Studio Pets</a></li>
+                      <li><a href="#">Huisstijl</a></li>
+                    <li><a href="#">Stageverslag 2</a></li>
+                    <li><a href="#">Spread</a></li>
+                    <li><a href="#">Kunstkwartet</a></li>
                   </ul>
+                </li> -->
+                <li>
+                  <a href="#about">About</a>
                 </li>
-    <li>
-      <a href="#about">About</a>
-    </li>
-    <li>
-      <a href="#resume">Resume</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-    <li>
-      <a href="https://twitter.com/maridlcrmn">Follow me</a>
-    </li>
-  </ul>
-</nav>
-<!-- /#sidebar-wrapper -->
+                <li>
+                  <a href="#resume">Resume</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <!-- /#sidebar-wrapper -->
 
-<!-- Page Content -->
-<!-- <div id="page-content-wrapper"> -->
-  <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-    <span class="hamb-top"></span>
-    <span class="hamb-middle"></span>
-    <span class="hamb-bottom"></span>
-  </button>
-  <div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('images/background.jpg');">
-    <div class="banner-content">
-      <h1>Portfoilo</h1>
-      <p>Eveline Tamis</p>
-    </div>
-  </div>
-  <div class="wrapper-grey padded" style="background-color: #FFFFFF" id="portfolio">
-    <div class="container" id="porto">
-      <div class="row">
-        <% data.projecten.each do |title, project| %>
-        <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-          <div class="card" style="background-image: url('<%= image_path project.card_picture %>');">
-            <div class="card-hover">
-              <h4><%= project.title %></h4>
-              <p class="text-white"><%= project.summary %></p>
-            </div>
-            <%= link_to "", "projecten/#{title}.html", class: "card-link" %>
-          </div>
-        </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
+            <!-- Page Content -->
+            <!-- <div id="page-content-wrapper"> -->
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+              <span class="hamb-top"></span>
+              <span class="hamb-middle"></span>
+              <span class="hamb-bottom"></span>
+            </button>
 
-  <div class="wrapper-grey padded" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-8" style="padding-left: 10px; padding-right: 10px">
-          <div class="card_about">
-            <h2>About:</h2>
-            <p>Hallo! Ik ben Eveline Tamis, vierdejaars student grafisch vormgeving op het Mediacollege. Welkom op mijn online portfolio. Op deze website laat ik mijn werk van de afgelopen vier jaar zien. U kunt hieronder ook mijn CV bekijken. </p>
 
-            <p>Ik ben altijd creatief bezig geweest. Het begon op de bassischool (Rudolf Steiner school/ Vrije school), met tekenlessen, schilderlessen, houtbewerking, handwerken en boetseren. Tekenlessen ben ik altijd blijven volgen. Na de middelbare school besloot ik een jaar High School in Amerika te volgen. Toen ik daar de les Graphic Design volgde, wist ik dat ik hiervan mijn beroep wilde maken.</p>
-
-            <p>De foto links is gemaakt tijdens mijn stage bij Studio Pets by Myrna. Zie mijn andere werkervaringen hieronder.
-            </p>
-          </div>
-        </div>
-        <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-          <div class="card" <div class="card" style="background-image: url('images/About.png');">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container" id="resume">
-    <div class="row">
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card_cv">
-          <p> Educatie </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card_cv">
-          <p> Werkervaring </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card_cv">
-          <p> Vaardigheden </p>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card-resume">
-          <p><b>Mediacollege 2012-2016 </b></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-        <div class="card-resume">
-         <p><b>Stage Studio Pets by Myrna 2/2015 - 10/2015  </b></p>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
-       </div>
-     </div>
-     <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-      <div class="card-resume">
-        <p>Ervaring met:</p>
-        <p>- Indesign</p>
-        <p>- Photoshop</p>
-        <p>- Illustrator</p>
-        <p>- Flash</p>
-        <p>- Dreamweaver</p>
-        <p>- De programma’s uit het Microsoft Office pakket</p>
-        <p>- Outlook</p>
-      </p>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-    <div class="card-resume">
-     <p><b>High school Amerika 2011 - 2012, Stewartville MN </b></p>
-     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure.</p>
-   </div>
- </div>
- <div class="col-sm-4 col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
-  <div class="card-resume">
-    <p><b>Stage Gemini Design 9/2014 - 1/2015 </b></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="wrapper-contact" id="contact">
-  <div class="box-contact" >
-    <h2>Contact</h2>
-    <div class="row">
-      <div class="col-xs-12 col-sm-5">
-        <p>
-          Ik ben momenteel beschikbaar voor freelance opdrachten.
-        </p>
-        <p>
-          Neem contact met mij op via dit formulier om mogelijkheden te bespreken.
-        </p>
-
-      </div>
-
-      <div class="col-xs-12 col-sm-7">
-        <form action="//formspree.io/jojanneketamis@hotmail.com" class="form-booking" method="POST">
-          <div class="row">
-            <div class="col-xs-4">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
+            <div class="banner" id="home" style="background: linear-gradient(180deg, rgba(130,217,255,0.6) 0%, rgba(0,36,61,0.6) 80%), url('images/banner.jpg');">
+              <div class="banner-content">
+                <h1>Portfolio</h1>
+                <h4>Eveline Tamis</h4>
+                <p>Graphic designer & illustrator</p>
+                <div class="row">
+                  <ul class="list-inline">
+                    <li class="icons"><a href="https://www.linkedin.com/in/jojanneke-tamis-39917430?trk=nav_responsive_tab_profile"> <i class="fa fa-linkedin-square fa-2x"></i></a></li>
+                    <li class="icons"><a href="https://behance.com/JojannekeTamis"><i class="fa fa-behance-square fa-2x"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bounce">
+              <a href="#portfolio"><i class="fa-angle-double-down"></a></i>
               </div>
             </div>
-            <div class="col-xs-8">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Email">
+
+            <div class="wrapper-grey padded" style="background-color: #FFFFFF" id="portfolio">
+              <div class="container" id="porto">
+                <div class="row">
+                  <% data.projecten.each do |title, project| %>
+                  <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+                    <div class="card" style="background-image: url('<%= image_path project.card_picture %>');">
+                      <div class="card-hover">
+                        <h4><%= project.title %></h4>
+                        <p class="text-white"><%= project.summary %></p>
+                      </div>
+                      <%= link_to "", "projecten/#{title}.html", class: "card-link" %>
+                    </div>
+                  </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+
+            <div class="wrapper-grey padded" id="about">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8" style="padding-left: 10px; padding-right: 10px">
+                    <div class="card_about">
+                      <h2>About</h2>
+                      <p>Hallo! Ik ben Eveline Tamis, vierdejaars student grafisch vormgeving op het Mediacollege. Welkom op mijn online portfolio. Op deze website laat ik mijn werk van de afgelopen vier jaar zien. </p>
+
+                      <p>Ik ben altijd creatief bezig geweest. Het begon op de bassischool (Rudolf Steiner school/ Vrije school), met tekenlessen, schilderlessen, houtbewerking, handwerken en boetseren. Tekenlessen ben ik altijd blijven volgen. Na de middelbare school besloot ik een jaar High School in Amerika te volgen. Toen ik daar de les Graphic Design volgde, wist ik dat ik hiervan mijn beroep wilde maken.</p>
+
+                      <p>De foto links is gemaakt tijdens mijn stage bij Studio Pets by Myrna. Zie mijn andere werkervaringen hieronder.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+                    <div class="card" id="card-photo" style="background-image: url('images/About.png');">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="container" id="resume">
+              <div class="row">
+                <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+                  <div class="card_cv">
+                    <p><b> Educatie </b></p>
+                  </div>
+                  <div class="card-resume">
+                    <p><b>Mediacollege 2012-2016 </b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
+                    <br>
+                    <p><b>High school Amerika 2011 - 2012, Stewartville MN </b></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure.</p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+                  <div class="card_cv">
+                    <p><b> Werkervaring</b></p>
+                  </div>
+                  <div class="card-resume">
+                   <p><b>Stage Studio Pets by Myrna 2/2015 - 10/2015  </b></p>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
+                   <br>
+                   <p><b>Stage Gemini Design 9/2014 - 1/2015 </b></p>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus sunt consequatur at eaque minima, quasi cumque ea quaerat sapiente molestias esse voluptate dolorum ipsum, officia eligendi similique aut veniam neque alias corporis iure. </p>
+                 </div>
+               </div>
+               <div class="col-xs-12 col-sm-4" style="padding-left: 10px; padding-right: 10px">
+                <div class="card_cv">
+                  <p><b> Vaardigheden</b></p>
+                </div>
+                <div class="card-resume">
+                  <p>- Indesign</p>
+                  <p>- Photoshop</p>
+                  <p>- Illustrator</p>
+                  <p>- Flash</p>
+                  <p>- Dreamweaver</p>
+                  <p>- De programma’s uit het Microsoft Office pakket</p>
+                  <p>- Outlook</p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <textarea name="message" class="form-group form-control" rows="5" placeholder="Message"></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12">
-              <input type="submit" class="btn" style="width: 100%;" value="Submit">
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
-</div>
-</div>
-<!-- /#page-content-wrapper -->
+          <div class="wrapper-contact" id="contact">
+            <div class="box-contact" >
+              <h2>Contact</h2>
+              <div class="row">
+                <div class="col-xs-12 col-sm-5">
+                  <p>
+                    Ik ben momenteel beschikbaar voor freelance opdrachten.
+                  </p>
+                  <p>
+                    Neem contact met mij op via dit formulier om mogelijkheden te bespreken.
+                  </p>
 
-<!-- </div> -->
+                </div>
+
+                <div class="col-xs-12 col-sm-7">
+                  <form action="//formspree.io/jojanneketamis@hotmail.com" class="form-booking" method="POST">
+                    <div class="row">
+                      <div class="col-xs-4">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                      </div>
+                      <div class="col-xs-8">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <textarea name="message" class="form-group form-control" rows="5" placeholder="Message"></textarea>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
+                        <input type="submit" class="btn" style="width: 100%;" value="Submit">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        <!-- </div> -->
 
 
 <!-- <div id="mySidenav" class="sidenav">

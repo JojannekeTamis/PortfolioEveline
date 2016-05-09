@@ -59,6 +59,7 @@
   justify-content: space-between;
   position: relative;
   display: inline-block;
+  z-index: 100;
   p {
   position: absolute;
   right: 50%;
@@ -74,3 +75,18 @@
   width: 100%;
 }
 
+.navbar-wagon-name{
+  text-align: center;
+  color: #FA8258;
+  h1 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+  font-size: 25px;
+}
+}
+
+.navbar-wagon-name:hover{
+  text-decoration: none;
+    color: #FA8258;
+    opacity: 0.5;
+}
