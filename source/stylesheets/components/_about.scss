@@ -3,7 +3,7 @@ margin-bottom: 0px;
 }
 
 .card_cv {
-  background-color: #FA8258;
+  background-color: #182e3d;
   text-align: center;
   margin-top: 70px;
   p {
@@ -11,7 +11,7 @@ margin-bottom: 0px;
     font-family: 'Roboto', sans-serif;
      font-weight: 400;
   font-size: 16px;
-  color: #182e3d;
+  color: white;
   }
 }
 
@@ -22,7 +22,8 @@ margin-bottom: 0px;
 #about {
   h2{
 font-family: 'Roboto', sans-serif;
-  font-size: 25px;
+  font-size: 23px;
+  font-weight: 300;
   }
   p {
     font-family: 'Roboto', sans-serif;
@@ -32,6 +33,12 @@ font-family: 'Roboto', sans-serif;
 }
 
 #resume {
+  h3{
+    font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: #FA8258;
+  }
   p {
     font-family: 'Roboto', sans-serif;
   font-size: 15px;
